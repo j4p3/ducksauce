@@ -1,0 +1,22 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'flat-ui';
+@import 'grid-settings';
+
+.btn {
+	background-color: $blue-dark;
+	&.btn-primary {
+		background-color: $orange;
+		&:hover {
+			background-color: lighten($orange, 10%);
+		}
+		&:active {
+			background-color: darken($orange, 10%);
+		}
+	}
+}
+
+section {
+	@include outer-container;
+
+}
