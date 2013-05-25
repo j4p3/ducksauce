@@ -1,22 +1,117 @@
+@import 'bootstrap/bootstrap';
+@import 'flat-ui';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
-@import 'flat-ui';
 @import 'grid-settings';
 
-.btn {
-	background-color: $blue-dark;
-	&.btn-primary {
-		background-color: $orange;
-		&:hover {
-			background-color: lighten($orange, 10%);
-		}
-		&:active {
-			background-color: darken($orange, 10%);
-		}
+@mixin important-button {
+	@extend .btn;	
+	@extend .btn-large;
+	@extend .btn-block;
+	@extend .btn-primary;
+}
+
+@mixin plumbing-button {
+	@extend .btn;
+	@extend .btn-large;
+	@extend .btn-block;
+}
+
+@mixin email-input {
+	display: block;
+	height: 20px;
+	line-height:20px;
+	padding-top:18px;
+	padding-bottom:18px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+@mixin regular-input {
+
+}
+
+body {
+	@include outer-container;
+}
+
+section.example {
+	@include span-columns(12);
+	padding: 2em;
+	border: 1px 2px solid $lightgray;
+}
+
+button.action-example {
+	@include important-button;
+}
+
+button.utility-example {
+	@include plumbing-button;
+	@include span-columns(4 of 6);
+}
+
+#utility-button, #action-button, #checkbox, #radio {
+	@include span-columns(6 of 12);
+}
+
+section.header { background-image: url("../images/back_pattern.png"); }
+section.places { background-image: url("../images/connect.png"); }
+section.action { background-image: url("../images/furley_bg.png"); }
+section.input { background-image: url("../images/light_wool.png"); }
+
+
+input.email-example {
+	@include email-input;
+	@include span-columns(4);
+	@include shift(4);
+}
+
+div.place {
+	@include span-columns(12);
+	padding: 1em 2em;
+	img {
+		@include span-columns(2 of 12);
+		@extend .img-circle;
+	}
+	.blurb {
+		@include span-columns(10 of 12);
+		p { color: $gray; }
+	}
+	cursor: pointer;
+	@include border-radius(6px);
+	@include transition(all .125s);
+	background-color: $lightgray;
+	border: 2px solid $gray;
+	&:hover {
+		border: 2px solid $firm;
+		.blurb > h1 { color: $firm; }
 	}
 }
 
-section {
-	@include outer-container;
-
+div.place-box {
+	margin-top:2em;
+	display:block;
+	background-image: url("../images/hk-above.jpg");
+	@include animation(all .125s);
+	@include span-columns(12);
+	@include border-radius(6px);
+	border: 2px solid $gray;
+	div.place {
+		margin-top:1em;
+		@include span-columns(10 of 12);
+		@include shift(1);
+	}
+	div.place-detail {
+		@include span-columns(10 of 12);
+		@include shift(1);
+		padding: 1em 2em;
+		@include animation(all .125s);
+		.actions {
+			@include span-columns(5 of 10);
+		}
+		.map {
+			@include span-columns(5 of 10);
+		}
+		ul { font-style: italic; }
+	}
 }
