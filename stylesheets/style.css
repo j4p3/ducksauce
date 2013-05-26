@@ -7663,6 +7663,14 @@ div.place-box {
     div.place-box div.place-detail ul {
       font-style: italic; }
 
+#logo {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 45px;
+  display: block; }
+
 nav.mobile {
   display: block;
   float: left;

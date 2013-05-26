@@ -147,6 +147,14 @@ div.place-box {
 }
 
 //	headers
+#logo {
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 40px;
+	width: 45px;
+	display:block;
+}
 nav.mobile {
 	@include span-columns(6);
 	#clipboard {
