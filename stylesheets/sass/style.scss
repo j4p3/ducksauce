@@ -1,20 +1,25 @@
+//	import libraries & modules
 @import 'bootstrap/bootstrap';
 @import 'flat-ui';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import 'grid-settings';
 
-@mixin important-button {
-	@extend .btn;	
-	@extend .btn-large;
-	@extend .btn-block;
-	@extend .btn-primary;
-}
-
-@mixin plumbing-button {
+//	mixins for replicating features
+@mixin button {
 	@extend .btn;
 	@extend .btn-large;
 	@extend .btn-block;
+}
+
+@mixin important-button {
+	@include button;
+	@extend .btn-primary;
+}
+
+@mixin fancy-button {
+	@include button;
+	@extend .btn-fancy;
 }
 
 @mixin email-input {
@@ -27,9 +32,16 @@
 	padding-right:15px;
 }
 
-@mixin regular-input {
-
+@mixin filter-blur {
+	filter: blur(5px);
+	// Browser Specific
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
 }
+
+//	general presentation layouts for demo
 
 body {
 	@include outer-container;
@@ -41,30 +53,39 @@ section.example {
 	border: 1px 2px solid $lightgray;
 }
 
-button.action-example {
-	@include important-button;
-}
-
-button.utility-example {
-	@include plumbing-button;
-	@include span-columns(4 of 6);
-}
-
-#utility-button, #action-button, #checkbox, #radio {
+#utility-button, #action-button, #checkbox, #fancy-button, #radio {
 	@include span-columns(6 of 12);
 }
+#text { @include span-columns(12); }
+#fancy-button { @include omega(); }
 
 section.header { background-image: url("../images/back_pattern.png"); }
 section.places { background-image: url("../images/connect.png"); }
 section.action { background-image: url("../images/furley_bg.png"); }
 section.input { background-image: url("../images/light_wool.png"); }
 
+section > span, div { margin: 1em 0; }
+
+//	inputs
+button.action-example {
+	@include important-button;
+}
+
+button.utility-example {
+	@include button;
+	@include span-columns(4 of 6);
+}
+button.fancy-example {
+	@include fancy-button;
+	@include span-columns(4 of 6);
+}
 
 input.email-example {
 	@include email-input;
-	@include span-columns(4);
-	@include shift(4);
+	@include span-columns(4 of 12);
 }
+
+//	places
 
 div.place {
 	@include span-columns(12);
@@ -92,26 +113,69 @@ div.place-box {
 	margin-top:2em;
 	display:block;
 	background-image: url("../images/hk-above.jpg");
+	background-size: cover;
+	height: 600px;
+	padding: 1em 0;
 	@include animation(all .125s);
 	@include span-columns(12);
 	@include border-radius(6px);
 	border: 2px solid $gray;
+	&.blurred { @include filter-blur; }
 	div.place {
-		margin-top:1em;
 		@include span-columns(10 of 12);
 		@include shift(1);
+		img { @include span-columns(2 of 10); }
+		.blurb {
+			@include span-columns(8 of 10);
+			@include omega();
+		}
 	}
 	div.place-detail {
-		@include span-columns(10 of 12);
-		@include shift(1);
-		padding: 1em 2em;
 		@include animation(all .125s);
+		padding:1px;
+		@include span-columns(10);
 		.actions {
 			@include span-columns(5 of 10);
 		}
 		.map {
 			@include span-columns(5 of 10);
+			@include omega();
+			height: 200px;
 		}
 		ul { font-style: italic; }
 	}
 }
+
+//	headers
+nav.mobile {
+	@include span-columns(6);
+	#clipboard {
+		background-image: url("../images/clipboard.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 20px;
+		width: 40px;
+		display:block;
+		margin-left: 1em;
+	}
+	#map {
+		background-image: url("../images/map.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 20px;
+		width: 40px;
+		display:block;
+	}
+}
+.navbar-unread {
+	@include transform(rotate(12deg));
+	right: -10px;
+	top:5px;
+}
+
+
+//	individual element values
+#place2 {
+	background-image: url("../images/knutsford_terrace.jpg");
+}
+

@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700");
 /*
  * Bootstrap v2.3.1
@@ -1329,11 +1328,13 @@ select:focus:invalid {
   .input-append .btn,
   .input-append button.action-example,
   .input-append button.utility-example,
+  .input-append button.fancy-example,
   .input-append .btn-group > .dropdown-toggle,
   .input-prepend .add-on,
   .input-prepend .btn,
   .input-prepend button.action-example,
   .input-prepend button.utility-example,
+  .input-prepend button.fancy-example,
   .input-prepend .btn-group > .dropdown-toggle {
     vertical-align: top;
     -webkit-border-radius: 0;
@@ -1347,12 +1348,14 @@ select:focus:invalid {
 .input-prepend .add-on,
 .input-prepend .btn,
 .input-prepend button.action-example,
-.input-prepend button.utility-example {
+.input-prepend button.utility-example,
+.input-prepend button.fancy-example {
   margin-right: -1px; }
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child,
 .input-prepend button.action-example:first-child,
-.input-prepend button.utility-example:first-child {
+.input-prepend button.utility-example:first-child,
+.input-prepend button.fancy-example:first-child {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px; }
@@ -1363,13 +1366,15 @@ select:focus:invalid {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px; }
-  .input-append input + .btn-group .btn:last-child, .input-append input + .btn-group button.action-example:last-child, .input-append input + .btn-group button.utility-example:last-child,
+  .input-append input + .btn-group .btn:last-child, .input-append input + .btn-group button.action-example:last-child, .input-append input + .btn-group button.utility-example:last-child, .input-append input + .btn-group button.fancy-example:last-child,
   .input-append select + .btn-group .btn:last-child,
   .input-append select + .btn-group button.action-example:last-child,
   .input-append select + .btn-group button.utility-example:last-child,
+  .input-append select + .btn-group button.fancy-example:last-child,
   .input-append .uneditable-input + .btn-group .btn:last-child,
   .input-append .uneditable-input + .btn-group button.action-example:last-child,
-  .input-append .uneditable-input + .btn-group button.utility-example:last-child {
+  .input-append .uneditable-input + .btn-group button.utility-example:last-child,
+  .input-append .uneditable-input + .btn-group button.fancy-example:last-child {
     -webkit-border-radius: 0 4px 4px 0;
     -moz-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0; }
@@ -1377,12 +1382,14 @@ select:focus:invalid {
 .input-append .btn,
 .input-append button.action-example,
 .input-append button.utility-example,
+.input-append button.fancy-example,
 .input-append .btn-group {
   margin-left: -1px; }
 .input-append .add-on:last-child,
 .input-append .btn:last-child,
 .input-append button.action-example:last-child,
 .input-append button.utility-example:last-child,
+.input-append button.fancy-example:last-child,
 .input-append .btn-group:last-child > .dropdown-toggle {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -1394,20 +1401,23 @@ select:focus:invalid {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
-  .input-prepend.input-append input + .btn-group .btn, .input-prepend.input-append input + .btn-group button.action-example, .input-prepend.input-append input + .btn-group button.utility-example,
+  .input-prepend.input-append input + .btn-group .btn, .input-prepend.input-append input + .btn-group button.action-example, .input-prepend.input-append input + .btn-group button.utility-example, .input-prepend.input-append input + .btn-group button.fancy-example,
   .input-prepend.input-append select + .btn-group .btn,
   .input-prepend.input-append select + .btn-group button.action-example,
   .input-prepend.input-append select + .btn-group button.utility-example,
+  .input-prepend.input-append select + .btn-group button.fancy-example,
   .input-prepend.input-append .uneditable-input + .btn-group .btn,
   .input-prepend.input-append .uneditable-input + .btn-group button.action-example,
-  .input-prepend.input-append .uneditable-input + .btn-group button.utility-example {
+  .input-prepend.input-append .uneditable-input + .btn-group button.utility-example,
+  .input-prepend.input-append .uneditable-input + .btn-group button.fancy-example {
     -webkit-border-radius: 0 4px 4px 0;
     -moz-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0; }
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child,
 .input-prepend.input-append button.action-example:first-child,
-.input-prepend.input-append button.utility-example:first-child {
+.input-prepend.input-append button.utility-example:first-child,
+.input-prepend.input-append button.fancy-example:first-child {
   margin-right: -1px;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
@@ -1415,7 +1425,8 @@ select:focus:invalid {
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child,
 .input-prepend.input-append button.action-example:last-child,
-.input-prepend.input-append button.utility-example:last-child {
+.input-prepend.input-append button.utility-example:last-child,
+.input-prepend.input-append button.fancy-example:last-child {
   margin-left: -1px;
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -1446,7 +1457,7 @@ input.search-query {
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px; }
 
-.form-search .input-append .btn, .form-search .input-append button.action-example, .form-search .input-append button.utility-example {
+.form-search .input-append .btn, .form-search .input-append button.action-example, .form-search .input-append button.utility-example, .form-search .input-append button.fancy-example {
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0; }
@@ -1456,7 +1467,7 @@ input.search-query {
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0; }
 
-.form-search .input-prepend .btn, .form-search .input-prepend button.action-example, .form-search .input-prepend button.utility-example {
+.form-search .input-prepend .btn, .form-search .input-prepend button.action-example, .form-search .input-prepend button.utility-example, .form-search .input-prepend button.fancy-example {
   -webkit-border-radius: 14px 0 0 14px;
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px; }
@@ -2484,7 +2495,7 @@ button.close {
   border: 0;
   -webkit-appearance: none; }
 
-.btn, button.action-example, button.utility-example {
+.btn, button.action-example, button.utility-example, button.fancy-example {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -2521,15 +2532,15 @@ button.close {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .btn:hover, button.action-example:hover, button.utility-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus, .btn:active, button.action-example:active, button.utility-example:active, .btn.active, button.active.action-example, button.active.utility-example, .btn.disabled, button.disabled.action-example, button.disabled.utility-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example {
+  .btn:hover, button.action-example:hover, button.utility-example:hover, button.fancy-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus, button.fancy-example:focus, .btn:active, button.action-example:active, button.utility-example:active, button.fancy-example:active, .btn.active, button.active.action-example, button.active.utility-example, button.active.fancy-example, .btn.disabled, button.disabled.action-example, button.disabled.utility-example, button.disabled.fancy-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example, button[disabled].fancy-example {
     color: #333333;
     background-color: #e6e6e6;
     *background-color: #d9d9d9; }
-  .btn:active, button.action-example:active, button.utility-example:active, .btn.active, button.active.action-example, button.active.utility-example {
+  .btn:active, button.action-example:active, button.utility-example:active, button.fancy-example:active, .btn.active, button.active.action-example, button.active.utility-example, button.active.fancy-example {
     background-color: #cccccc \9; }
-  .btn:first-child, button.action-example:first-child, button.utility-example:first-child {
+  .btn:first-child, button.action-example:first-child, button.utility-example:first-child, button.fancy-example:first-child {
     *margin-left: 0; }
-  .btn:hover, button.action-example:hover, button.utility-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus {
+  .btn:hover, button.action-example:hover, button.utility-example:hover, button.fancy-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus, button.fancy-example:focus {
     color: #333333;
     text-decoration: none;
     background-position: 0 -15px;
@@ -2537,17 +2548,17 @@ button.close {
     -moz-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
-  .btn:focus, button.action-example:focus, button.utility-example:focus {
+  .btn:focus, button.action-example:focus, button.utility-example:focus, button.fancy-example:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn.active, button.active.action-example, button.active.utility-example, .btn:active, button.action-example:active, button.utility-example:active {
+  .btn.active, button.active.action-example, button.active.utility-example, button.active.fancy-example, .btn:active, button.action-example:active, button.utility-example:active, button.fancy-example:active {
     background-image: none;
     outline: 0;
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .btn.disabled, button.disabled.action-example, button.disabled.utility-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example {
+  .btn.disabled, button.disabled.action-example, button.disabled.utility-example, button.disabled.fancy-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example, button[disabled].fancy-example {
     cursor: default;
     background-image: none;
     opacity: 0.65;
@@ -2556,17 +2567,18 @@ button.close {
     -moz-box-shadow: none;
     box-shadow: none; }
 
-.btn-large, button.action-example, button.utility-example {
+.btn-large, button.action-example, button.utility-example, button.fancy-example {
   padding: 11px 19px;
   font-size: 17.5px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px; }
 
-.btn-large [class^="icon-"], button.action-example [class^="icon-"], button.utility-example [class^="icon-"],
+.btn-large [class^="icon-"], button.action-example [class^="icon-"], button.utility-example [class^="icon-"], button.fancy-example [class^="icon-"],
 .btn-large [class*=" icon-"],
 button.action-example [class*=" icon-"],
-button.utility-example [class*=" icon-"] {
+button.utility-example [class*=" icon-"],
+button.fancy-example [class*=" icon-"] {
   margin-top: 4px; }
 
 .btn-small {
@@ -2591,7 +2603,7 @@ button.utility-example [class*=" icon-"] {
   -moz-border-radius: 3px;
   border-radius: 3px; }
 
-.btn-block, button.action-example, button.utility-example {
+.btn-block, button.action-example, button.utility-example, button.fancy-example {
   display: block;
   width: 100%;
   padding-left: 0;
@@ -2600,7 +2612,7 @@ button.utility-example [class*=" icon-"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.btn-block + .btn-block, button.action-example + .btn-block, button.utility-example + .btn-block, .btn-block + button.action-example, button.action-example + button.action-example, button.utility-example + button.action-example, .btn-block + button.utility-example, button.action-example + button.utility-example, button.utility-example + button.utility-example {
+.btn-block + .btn-block, button.action-example + .btn-block, button.utility-example + .btn-block, button.fancy-example + .btn-block, .btn-block + button.action-example, button.action-example + button.action-example, button.utility-example + button.action-example, button.fancy-example + button.action-example, .btn-block + button.utility-example, button.action-example + button.utility-example, button.utility-example + button.utility-example, button.fancy-example + button.utility-example, .btn-block + button.fancy-example, button.action-example + button.fancy-example, button.utility-example + button.fancy-example, button.fancy-example + button.fancy-example {
   margin-top: 5px; }
 
 input[type="submit"].btn-block,
@@ -2754,23 +2766,23 @@ input[type="button"].btn-block {
   .btn-inverse:active, .btn-inverse.active {
     background-color: #090909 \9; }
 
-button.btn, button.action-example, button.utility-example,
+button.btn, button.action-example, button.utility-example, button.fancy-example,
 input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px; }
-  button.btn::-moz-focus-inner, button.action-example::-moz-focus-inner, button.utility-example::-moz-focus-inner,
+  button.btn::-moz-focus-inner, button.action-example::-moz-focus-inner, button.utility-example::-moz-focus-inner, button.fancy-example::-moz-focus-inner,
   input[type="submit"].btn::-moz-focus-inner {
     padding: 0;
     border: 0; }
-  button.btn.btn-large, button.action-example, button.utility-example,
+  button.btn.btn-large, button.action-example, button.utility-example, button.fancy-example,
   input[type="submit"].btn.btn-large {
     *padding-top: 7px;
     *padding-bottom: 7px; }
-  button.btn.btn-small, button.btn-small.action-example, button.btn-small.utility-example,
+  button.btn.btn-small, button.btn-small.action-example, button.btn-small.utility-example, button.btn-small.fancy-example,
   input[type="submit"].btn.btn-small {
     *padding-top: 3px;
     *padding-bottom: 3px; }
-  button.btn.btn-mini, button.btn-mini.action-example, button.btn-mini.utility-example,
+  button.btn.btn-mini, button.btn-mini.action-example, button.btn-mini.utility-example, button.btn-mini.fancy-example,
   input[type="submit"].btn.btn-mini {
     *padding-top: 1px;
     *padding-bottom: 1px; }
@@ -2823,25 +2835,27 @@ input[type="submit"].btn {
   font-size: 0;
   margin-top: 10px;
   margin-bottom: 10px; }
-  .btn-toolbar > .btn + .btn, .btn-toolbar > button.action-example + .btn, .btn-toolbar > button.utility-example + .btn, .btn-toolbar > .btn + button.action-example, .btn-toolbar > button.action-example + button.action-example, .btn-toolbar > button.utility-example + button.action-example, .btn-toolbar > .btn + button.utility-example, .btn-toolbar > button.action-example + button.utility-example, .btn-toolbar > button.utility-example + button.utility-example,
+  .btn-toolbar > .btn + .btn, .btn-toolbar > button.action-example + .btn, .btn-toolbar > button.utility-example + .btn, .btn-toolbar > button.fancy-example + .btn, .btn-toolbar > .btn + button.action-example, .btn-toolbar > button.action-example + button.action-example, .btn-toolbar > button.utility-example + button.action-example, .btn-toolbar > button.fancy-example + button.action-example, .btn-toolbar > .btn + button.utility-example, .btn-toolbar > button.action-example + button.utility-example, .btn-toolbar > button.utility-example + button.utility-example, .btn-toolbar > button.fancy-example + button.utility-example, .btn-toolbar > .btn + button.fancy-example, .btn-toolbar > button.action-example + button.fancy-example, .btn-toolbar > button.utility-example + button.fancy-example, .btn-toolbar > button.fancy-example + button.fancy-example,
   .btn-toolbar > .btn-group + .btn,
   .btn-toolbar > .btn-group + button.action-example,
   .btn-toolbar > .btn-group + button.utility-example,
+  .btn-toolbar > .btn-group + button.fancy-example,
   .btn-toolbar > .btn + .btn-group,
   .btn-toolbar > button.action-example + .btn-group,
-  .btn-toolbar > button.utility-example + .btn-group {
+  .btn-toolbar > button.utility-example + .btn-group,
+  .btn-toolbar > button.fancy-example + .btn-group {
     margin-left: 5px; }
 
-.btn-group > .btn, .btn-group > button.action-example, .btn-group > button.utility-example {
+.btn-group > .btn, .btn-group > button.action-example, .btn-group > button.utility-example, .btn-group > button.fancy-example {
   position: relative;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
 
-.btn-group > .btn + .btn, .btn-group > button.action-example + .btn, .btn-group > button.utility-example + .btn, .btn-group > .btn + button.action-example, .btn-group > button.action-example + button.action-example, .btn-group > button.utility-example + button.action-example, .btn-group > .btn + button.utility-example, .btn-group > button.action-example + button.utility-example, .btn-group > button.utility-example + button.utility-example {
+.btn-group > .btn + .btn, .btn-group > button.action-example + .btn, .btn-group > button.utility-example + .btn, .btn-group > button.fancy-example + .btn, .btn-group > .btn + button.action-example, .btn-group > button.action-example + button.action-example, .btn-group > button.utility-example + button.action-example, .btn-group > button.fancy-example + button.action-example, .btn-group > .btn + button.utility-example, .btn-group > button.action-example + button.utility-example, .btn-group > button.utility-example + button.utility-example, .btn-group > button.fancy-example + button.utility-example, .btn-group > .btn + button.fancy-example, .btn-group > button.action-example + button.fancy-example, .btn-group > button.utility-example + button.fancy-example, .btn-group > button.fancy-example + button.fancy-example {
   margin-left: -1px; }
 
-.btn-group > .btn, .btn-group > button.action-example, .btn-group > button.utility-example,
+.btn-group > .btn, .btn-group > button.action-example, .btn-group > button.utility-example, .btn-group > button.fancy-example,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
   font-size: 14px; }
@@ -2852,10 +2866,10 @@ input[type="submit"].btn {
 .btn-group > .btn-small {
   font-size: 11.9px; }
 
-.btn-group > .btn-large, .btn-group > button.action-example, .btn-group > button.utility-example {
+.btn-group > .btn-large, .btn-group > button.action-example, .btn-group > button.utility-example, .btn-group > button.fancy-example {
   font-size: 17.5px; }
 
-.btn-group > .btn:first-child, .btn-group > button.action-example:first-child, .btn-group > button.utility-example:first-child {
+.btn-group > .btn:first-child, .btn-group > button.action-example:first-child, .btn-group > button.utility-example:first-child, .btn-group > button.fancy-example:first-child {
   margin-left: 0;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topleft: 4px;
@@ -2864,7 +2878,7 @@ input[type="submit"].btn {
   -moz-border-radius-bottomleft: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group > .btn:last-child, .btn-group > button.action-example:last-child, .btn-group > button.utility-example:last-child,
+.btn-group > .btn:last-child, .btn-group > button.action-example:last-child, .btn-group > button.utility-example:last-child, .btn-group > button.fancy-example:last-child,
 .btn-group > .dropdown-toggle {
   -webkit-border-top-right-radius: 4px;
   -moz-border-radius-topright: 4px;
@@ -2873,7 +2887,7 @@ input[type="submit"].btn {
   -moz-border-radius-bottomright: 4px;
   border-bottom-right-radius: 4px; }
 
-.btn-group > .btn.large:first-child, .btn-group > button.large.action-example:first-child, .btn-group > button.large.utility-example:first-child {
+.btn-group > .btn.large:first-child, .btn-group > button.large.action-example:first-child, .btn-group > button.large.utility-example:first-child, .btn-group > button.large.fancy-example:first-child {
   margin-left: 0;
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topleft: 6px;
@@ -2882,7 +2896,7 @@ input[type="submit"].btn {
   -moz-border-radius-bottomleft: 6px;
   border-bottom-left-radius: 6px; }
 
-.btn-group > .btn.large:last-child, .btn-group > button.large.action-example:last-child, .btn-group > button.large.utility-example:last-child,
+.btn-group > .btn.large:last-child, .btn-group > button.large.action-example:last-child, .btn-group > button.large.utility-example:last-child, .btn-group > button.large.fancy-example:last-child,
 .btn-group > .large.dropdown-toggle {
   -webkit-border-top-right-radius: 6px;
   -moz-border-radius-topright: 6px;
@@ -2891,23 +2905,26 @@ input[type="submit"].btn {
   -moz-border-radius-bottomright: 6px;
   border-bottom-right-radius: 6px; }
 
-.btn-group > .btn:hover, .btn-group > button.action-example:hover, .btn-group > button.utility-example:hover,
+.btn-group > .btn:hover, .btn-group > button.action-example:hover, .btn-group > button.utility-example:hover, .btn-group > button.fancy-example:hover,
 .btn-group > .btn:focus,
 .btn-group > button.action-example:focus,
 .btn-group > button.utility-example:focus,
+.btn-group > button.fancy-example:focus,
 .btn-group > .btn:active,
 .btn-group > button.action-example:active,
 .btn-group > button.utility-example:active,
+.btn-group > button.fancy-example:active,
 .btn-group > .btn.active,
 .btn-group > button.active.action-example,
-.btn-group > button.active.utility-example {
+.btn-group > button.active.utility-example,
+.btn-group > button.active.fancy-example {
   z-index: 2; }
 
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, .btn-group > button.action-example + .dropdown-toggle, .btn-group > button.utility-example + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > button.action-example + .dropdown-toggle, .btn-group > button.utility-example + .dropdown-toggle, .btn-group > button.fancy-example + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
   -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -2926,7 +2943,7 @@ input[type="submit"].btn {
   *padding-top: 5px;
   *padding-bottom: 4px; }
 
-.btn-group > .btn-large + .dropdown-toggle, .btn-group > button.action-example + .dropdown-toggle, .btn-group > button.utility-example + .dropdown-toggle {
+.btn-group > .btn-large + .dropdown-toggle, .btn-group > button.action-example + .dropdown-toggle, .btn-group > button.utility-example + .dropdown-toggle, .btn-group > button.fancy-example + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
   *padding-top: 7px;
@@ -2937,7 +2954,7 @@ input[type="submit"].btn {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-.btn-group.open .btn.dropdown-toggle, .btn-group.open button.dropdown-toggle.action-example, .btn-group.open button.dropdown-toggle.utility-example {
+.btn-group.open .btn.dropdown-toggle, .btn-group.open button.dropdown-toggle.action-example, .btn-group.open button.dropdown-toggle.utility-example, .btn-group.open button.dropdown-toggle.fancy-example {
   background-color: #e6e6e6; }
 .btn-group.open .btn-primary.dropdown-toggle, .btn-group.open button.dropdown-toggle.action-example {
   background-color: #0044cc; }
@@ -2952,14 +2969,14 @@ input[type="submit"].btn {
 .btn-group.open .btn-inverse.dropdown-toggle {
   background-color: #222222; }
 
-.btn .caret, button.action-example .caret, button.utility-example .caret {
+.btn .caret, button.action-example .caret, button.utility-example .caret, button.fancy-example .caret {
   margin-top: 8px;
   margin-left: 0; }
 
-.btn-large .caret, button.action-example .caret, button.utility-example .caret {
+.btn-large .caret, button.action-example .caret, button.utility-example .caret, button.fancy-example .caret {
   margin-top: 6px; }
 
-.btn-large .caret, button.action-example .caret, button.utility-example .caret {
+.btn-large .caret, button.action-example .caret, button.utility-example .caret, button.fancy-example .caret {
   border-left-width: 5px;
   border-right-width: 5px;
   border-top-width: 5px; }
@@ -2968,7 +2985,7 @@ input[type="submit"].btn {
 .btn-small .caret {
   margin-top: 8px; }
 
-.dropup .btn-large .caret, .dropup button.action-example .caret, .dropup button.utility-example .caret {
+.dropup .btn-large .caret, .dropup button.action-example .caret, .dropup button.utility-example .caret, .dropup button.fancy-example .caret {
   border-bottom-width: 5px; }
 
 .btn-primary .caret, button.action-example .caret,
@@ -2986,7 +3003,7 @@ input[type="submit"].btn {
   /* IE7 inline-block hack */
   *zoom: 1; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > button.action-example, .btn-group-vertical > button.utility-example {
+.btn-group-vertical > .btn, .btn-group-vertical > button.action-example, .btn-group-vertical > button.utility-example, .btn-group-vertical > button.fancy-example {
   display: block;
   float: none;
   max-width: 100%;
@@ -2994,26 +3011,26 @@ input[type="submit"].btn {
   -moz-border-radius: 0;
   border-radius: 0; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > button.action-example + .btn, .btn-group-vertical > button.utility-example + .btn, .btn-group-vertical > .btn + button.action-example, .btn-group-vertical > button.action-example + button.action-example, .btn-group-vertical > button.utility-example + button.action-example, .btn-group-vertical > .btn + button.utility-example, .btn-group-vertical > button.action-example + button.utility-example, .btn-group-vertical > button.utility-example + button.utility-example {
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > button.action-example + .btn, .btn-group-vertical > button.utility-example + .btn, .btn-group-vertical > button.fancy-example + .btn, .btn-group-vertical > .btn + button.action-example, .btn-group-vertical > button.action-example + button.action-example, .btn-group-vertical > button.utility-example + button.action-example, .btn-group-vertical > button.fancy-example + button.action-example, .btn-group-vertical > .btn + button.utility-example, .btn-group-vertical > button.action-example + button.utility-example, .btn-group-vertical > button.utility-example + button.utility-example, .btn-group-vertical > button.fancy-example + button.utility-example, .btn-group-vertical > .btn + button.fancy-example, .btn-group-vertical > button.action-example + button.fancy-example, .btn-group-vertical > button.utility-example + button.fancy-example, .btn-group-vertical > button.fancy-example + button.fancy-example {
   margin-left: 0;
   margin-top: -1px; }
 
-.btn-group-vertical > .btn:first-child, .btn-group-vertical > button.action-example:first-child, .btn-group-vertical > button.utility-example:first-child {
+.btn-group-vertical > .btn:first-child, .btn-group-vertical > button.action-example:first-child, .btn-group-vertical > button.utility-example:first-child, .btn-group-vertical > button.fancy-example:first-child {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0; }
 
-.btn-group-vertical > .btn:last-child, .btn-group-vertical > button.action-example:last-child, .btn-group-vertical > button.utility-example:last-child {
+.btn-group-vertical > .btn:last-child, .btn-group-vertical > button.action-example:last-child, .btn-group-vertical > button.utility-example:last-child, .btn-group-vertical > button.fancy-example:last-child {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px; }
 
-.btn-group-vertical > .btn-large:first-child, .btn-group-vertical > button.action-example:first-child, .btn-group-vertical > button.utility-example:first-child {
+.btn-group-vertical > .btn-large:first-child, .btn-group-vertical > button.action-example:first-child, .btn-group-vertical > button.utility-example:first-child, .btn-group-vertical > button.fancy-example:first-child {
   -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
   border-radius: 6px 6px 0 0; }
 
-.btn-group-vertical > .btn-large:last-child, .btn-group-vertical > button.action-example:last-child, .btn-group-vertical > button.utility-example:last-child {
+.btn-group-vertical > .btn-large:last-child, .btn-group-vertical > button.action-example:last-child, .btn-group-vertical > button.utility-example:last-child, .btn-group-vertical > button.fancy-example:last-child {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px; }
@@ -3482,17 +3499,19 @@ input[type="submit"].btn {
   border-left: 1px solid #f2f2f2;
   border-right: 1px solid white; }
 
-.navbar .btn, .navbar button.action-example, .navbar button.utility-example,
+.navbar .btn, .navbar button.action-example, .navbar button.utility-example, .navbar button.fancy-example,
 .navbar .btn-group {
   margin-top: 5px; }
 
-.navbar .btn-group .btn, .navbar .btn-group button.action-example, .navbar .btn-group button.utility-example,
+.navbar .btn-group .btn, .navbar .btn-group button.action-example, .navbar .btn-group button.utility-example, .navbar .btn-group button.fancy-example,
 .navbar .input-prepend .btn,
 .navbar .input-prepend button.action-example,
 .navbar .input-prepend button.utility-example,
+.navbar .input-prepend button.fancy-example,
 .navbar .input-append .btn,
 .navbar .input-append button.action-example,
 .navbar .input-append button.utility-example,
+.navbar .input-append button.fancy-example,
 .navbar .input-prepend .btn-group,
 .navbar .input-append .btn-group {
   margin-top: 0; }
@@ -3515,7 +3534,8 @@ input[type="submit"].btn {
   .navbar-form select,
   .navbar-form .btn,
   .navbar-form button.action-example,
-  .navbar-form button.utility-example {
+  .navbar-form button.utility-example,
+  .navbar-form button.fancy-example {
     display: inline-block;
     margin-bottom: 0; }
   .navbar-form input[type="image"],
@@ -4140,12 +4160,12 @@ input[type="submit"].btn {
     line-height: 0; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer button.action-example + .btn, .modal-footer button.utility-example + .btn, .modal-footer .btn + button.action-example, .modal-footer button.action-example + button.action-example, .modal-footer button.utility-example + button.action-example, .modal-footer .btn + button.utility-example, .modal-footer button.action-example + button.utility-example, .modal-footer button.utility-example + button.utility-example {
+  .modal-footer .btn + .btn, .modal-footer button.action-example + .btn, .modal-footer button.utility-example + .btn, .modal-footer button.fancy-example + .btn, .modal-footer .btn + button.action-example, .modal-footer button.action-example + button.action-example, .modal-footer button.utility-example + button.action-example, .modal-footer button.fancy-example + button.action-example, .modal-footer .btn + button.utility-example, .modal-footer button.action-example + button.utility-example, .modal-footer button.utility-example + button.utility-example, .modal-footer button.fancy-example + button.utility-example, .modal-footer .btn + button.fancy-example, .modal-footer button.action-example + button.fancy-example, .modal-footer button.utility-example + button.fancy-example, .modal-footer button.fancy-example + button.fancy-example {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group button.action-example + .btn, .modal-footer .btn-group button.utility-example + .btn, .modal-footer .btn-group .btn + button.action-example, .modal-footer .btn-group button.action-example + button.action-example, .modal-footer .btn-group button.utility-example + button.action-example, .modal-footer .btn-group .btn + button.utility-example, .modal-footer .btn-group button.action-example + button.utility-example, .modal-footer .btn-group button.utility-example + button.utility-example {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group button.action-example + .btn, .modal-footer .btn-group button.utility-example + .btn, .modal-footer .btn-group button.fancy-example + .btn, .modal-footer .btn-group .btn + button.action-example, .modal-footer .btn-group button.action-example + button.action-example, .modal-footer .btn-group button.utility-example + button.action-example, .modal-footer .btn-group button.fancy-example + button.action-example, .modal-footer .btn-group .btn + button.utility-example, .modal-footer .btn-group button.action-example + button.utility-example, .modal-footer .btn-group button.utility-example + button.utility-example, .modal-footer .btn-group button.fancy-example + button.utility-example, .modal-footer .btn-group .btn + button.fancy-example, .modal-footer .btn-group button.action-example + button.fancy-example, .modal-footer .btn-group button.utility-example + button.fancy-example, .modal-footer .btn-group button.fancy-example + button.fancy-example {
     margin-left: -1px; }
-  .modal-footer .btn-block + .btn-block, .modal-footer button.action-example + .btn-block, .modal-footer button.utility-example + .btn-block, .modal-footer .btn-block + button.action-example, .modal-footer button.action-example + button.action-example, .modal-footer button.utility-example + button.action-example, .modal-footer .btn-block + button.utility-example, .modal-footer button.action-example + button.utility-example, .modal-footer button.utility-example + button.utility-example {
+  .modal-footer .btn-block + .btn-block, .modal-footer button.action-example + .btn-block, .modal-footer button.utility-example + .btn-block, .modal-footer button.fancy-example + .btn-block, .modal-footer .btn-block + button.action-example, .modal-footer button.action-example + button.action-example, .modal-footer button.utility-example + button.action-example, .modal-footer button.fancy-example + button.action-example, .modal-footer .btn-block + button.utility-example, .modal-footer button.action-example + button.utility-example, .modal-footer button.utility-example + button.utility-example, .modal-footer button.fancy-example + button.utility-example, .modal-footer .btn-block + button.fancy-example, .modal-footer button.action-example + button.fancy-example, .modal-footer button.utility-example + button.fancy-example, .modal-footer button.fancy-example + button.fancy-example {
     margin-left: 0; }
 
 .tooltip {
@@ -4504,10 +4524,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 .badge-inverse[href] {
   background-color: #1a1a1a; }
 
-.btn .label, button.action-example .label, button.utility-example .label,
+.btn .label, button.action-example .label, button.utility-example .label, button.fancy-example .label,
 .btn .badge,
 button.action-example .badge,
-button.utility-example .badge {
+button.utility-example .badge,
+button.fancy-example .badge {
   position: relative;
   top: -1px; }
 
@@ -5112,7 +5133,7 @@ h6 {
   font-weight: 500;
   text-transform: uppercase; }
 
-.btn, button.action-example, button.utility-example {
+.btn, button.action-example, button.utility-example, button.fancy-example {
   border: none;
   background: #152d2e;
   color: white;
@@ -5127,7 +5148,7 @@ h6 {
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden; }
-  .btn:hover, button.action-example:hover, button.utility-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus {
+  .btn:hover, button.action-example:hover, button.utility-example:hover, button.fancy-example:hover, .btn:focus, button.action-example:focus, button.utility-example:focus, button.fancy-example:focus {
     background-color: #31696b;
     color: white;
     -webkit-transition: 0.25s;
@@ -5135,61 +5156,72 @@ h6 {
     -o-transition: 0.25s;
     transition: 0.25s;
     -webkit-backface-visibility: hidden; }
-  .btn:active, button.action-example:active, button.utility-example:active, .btn.active, button.active.action-example, button.active.utility-example {
+  .btn:active, button.action-example:active, button.utility-example:active, button.fancy-example:active, .btn.active, button.active.action-example, button.active.utility-example, button.active.fancy-example {
     background-color: #122627;
     color: rgba(255, 255, 255, 0.75);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  .btn.disabled, button.disabled.action-example, button.disabled.utility-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example {
+  .btn.disabled, button.disabled.action-example, button.disabled.utility-example, button.disabled.fancy-example, .btn[disabled], button[disabled].action-example, button[disabled].utility-example, button[disabled].fancy-example {
     background-color: #bdc1c5;
     color: white; }
-  .btn.btn-large, button.action-example, button.utility-example {
+  .btn.btn-large, button.action-example, button.utility-example, button.fancy-example {
     padding-bottom: 12px;
     padding-top: 13px; }
-  .btn.btn-primary, button.action-example, button.btn-primary.utility-example {
+  .btn.btn-primary, button.action-example, button.btn-primary.utility-example, button.btn-primary.fancy-example {
     background-color: #ff851c; }
-    .btn.btn-primary:hover, button.action-example:hover, button.btn-primary.utility-example:hover, .btn.btn-primary:focus, button.action-example:focus, button.btn-primary.utility-example:focus {
+    .btn.btn-primary:hover, button.action-example:hover, button.btn-primary.utility-example:hover, button.btn-primary.fancy-example:hover, .btn.btn-primary:focus, button.action-example:focus, button.btn-primary.utility-example:focus, button.btn-primary.fancy-example:focus {
       background-color: #ff9d49; }
-    .btn.btn-primary:active, button.action-example:active, button.btn-primary.utility-example:active, .btn.btn-primary.active, button.active.action-example, button.btn-primary.active.utility-example {
+    .btn.btn-primary:active, button.action-example:active, button.btn-primary.utility-example:active, button.btn-primary.fancy-example:active, .btn.btn-primary.active, button.active.action-example, button.btn-primary.active.utility-example, button.btn-primary.active.fancy-example {
       background-color: #f16f00; }
-  .btn.btn-info, button.btn-info.action-example, button.btn-info.utility-example {
+  .btn.btn-info, button.btn-info.action-example, button.btn-info.utility-example, button.btn-info.fancy-example {
     background-color: #3498db; }
-    .btn.btn-info:hover, button.btn-info.action-example:hover, button.btn-info.utility-example:hover, .btn.btn-info:focus, button.btn-info.action-example:focus, button.btn-info.utility-example:focus {
+    .btn.btn-info:hover, button.btn-info.action-example:hover, button.btn-info.utility-example:hover, button.btn-info.fancy-example:hover, .btn.btn-info:focus, button.btn-info.action-example:focus, button.btn-info.utility-example:focus, button.btn-info.fancy-example:focus {
       background-color: #5dade2; }
-    .btn.btn-info:active, button.btn-info.action-example:active, button.btn-info.utility-example:active, .btn.btn-info.active, button.btn-info.active.action-example, button.btn-info.active.utility-example {
+    .btn.btn-info:active, button.btn-info.action-example:active, button.btn-info.utility-example:active, button.btn-info.fancy-example:active, .btn.btn-info.active, button.btn-info.active.action-example, button.btn-info.active.utility-example, button.btn-info.active.fancy-example {
       background-color: #2383c4; }
-  .btn.btn-danger, button.btn-danger.action-example, button.btn-danger.utility-example {
+  .btn.btn-danger, button.btn-danger.action-example, button.btn-danger.utility-example, button.btn-danger.fancy-example {
     background-color: #e74c3c; }
-    .btn.btn-danger:hover, button.btn-danger.action-example:hover, button.btn-danger.utility-example:hover, .btn.btn-danger:focus, button.btn-danger.action-example:focus, button.btn-danger.utility-example:focus {
+    .btn.btn-danger:hover, button.btn-danger.action-example:hover, button.btn-danger.utility-example:hover, button.btn-danger.fancy-example:hover, .btn.btn-danger:focus, button.btn-danger.action-example:focus, button.btn-danger.utility-example:focus, button.btn-danger.fancy-example:focus {
       background-color: #ec7063; }
-    .btn.btn-danger:active, button.btn-danger.action-example:active, button.btn-danger.utility-example:active, .btn.btn-danger.active, button.btn-danger.active.action-example, button.btn-danger.active.utility-example {
+    .btn.btn-danger:active, button.btn-danger.action-example:active, button.btn-danger.utility-example:active, button.btn-danger.fancy-example:active, .btn.btn-danger.active, button.btn-danger.active.action-example, button.btn-danger.active.utility-example, button.btn-danger.active.fancy-example {
       background-color: #dc2d1b; }
-  .btn.btn-success, button.btn-success.action-example, button.btn-success.utility-example {
+  .btn.btn-success, button.btn-success.action-example, button.btn-success.utility-example, button.btn-success.fancy-example {
     background-color: #2ecc71; }
-    .btn.btn-success:hover, button.btn-success.action-example:hover, button.btn-success.utility-example:hover, .btn.btn-success:focus, button.btn-success.action-example:focus, button.btn-success.utility-example:focus {
+    .btn.btn-success:hover, button.btn-success.action-example:hover, button.btn-success.utility-example:hover, button.btn-success.fancy-example:hover, .btn.btn-success:focus, button.btn-success.action-example:focus, button.btn-success.utility-example:focus, button.btn-success.fancy-example:focus {
       background-color: #55d98d; }
-    .btn.btn-success:active, button.btn-success.action-example:active, button.btn-success.utility-example:active, .btn.btn-success.active, button.btn-success.active.action-example, button.btn-success.active.utility-example {
+    .btn.btn-success:active, button.btn-success.action-example:active, button.btn-success.utility-example:active, button.btn-success.fancy-example:active, .btn.btn-success.active, button.btn-success.active.action-example, button.btn-success.active.utility-example, button.btn-success.active.fancy-example {
       background-color: #27ad60; }
-  .btn.btn-warning, button.btn-warning.action-example, button.btn-warning.utility-example {
+  .btn.btn-warning, button.btn-warning.action-example, button.btn-warning.utility-example, button.btn-warning.fancy-example {
     background-color: #f1c40f; }
-    .btn.btn-warning:hover, button.btn-warning.action-example:hover, button.btn-warning.utility-example:hover, .btn.btn-warning:focus, button.btn-warning.action-example:focus, button.btn-warning.utility-example:focus {
+    .btn.btn-warning:hover, button.btn-warning.action-example:hover, button.btn-warning.utility-example:hover, button.btn-warning.fancy-example:hover, .btn.btn-warning:focus, button.btn-warning.action-example:focus, button.btn-warning.utility-example:focus, button.btn-warning.fancy-example:focus {
       background-color: #f4d03f; }
-    .btn.btn-warning:active, button.btn-warning.action-example:active, button.btn-warning.utility-example:active, .btn.btn-warning.active, button.btn-warning.active.action-example, button.btn-warning.active.utility-example {
+    .btn.btn-warning:active, button.btn-warning.action-example:active, button.btn-warning.utility-example:active, button.btn-warning.fancy-example:active, .btn.btn-warning.active, button.btn-warning.active.action-example, button.btn-warning.active.utility-example, button.btn-warning.active.fancy-example {
       background-color: #cea70c; }
-  .btn-toolbar .btn, .btn-toolbar button.action-example, .btn-toolbar button.utility-example {
+  .btn.btn-fancy, button.btn-fancy.action-example, button.btn-fancy.utility-example, button.fancy-example {
+    color: #152d2e;
+    background-color: #ffe500; }
+    .btn.btn-fancy:hover, button.btn-fancy.action-example:hover, button.btn-fancy.utility-example:hover, button.fancy-example:hover, .btn.btn-fancy:focus, button.btn-fancy.action-example:focus, button.btn-fancy.utility-example:focus, button.fancy-example:focus {
+      color: #152d2e; }
+    .btn.btn-fancy:active, button.btn-fancy.action-example:active, button.btn-fancy.utility-example:active, button.fancy-example:active, .btn.btn-fancy.active, button.btn-fancy.active.action-example, button.btn-fancy.active.utility-example, button.active.fancy-example {
+      color: rgba(21, 45, 46, 0.75); }
+    .btn.btn-fancy:hover, button.btn-fancy.action-example:hover, button.btn-fancy.utility-example:hover, button.fancy-example:hover, .btn.btn-fancy:focus, button.btn-fancy.action-example:focus, button.btn-fancy.utility-example:focus, button.fancy-example:focus {
+      background-color: #ffea33; }
+    .btn.btn-fancy:active, button.btn-fancy.action-example:active, button.btn-fancy.utility-example:active, button.fancy-example:active, .btn.btn-fancy.active, button.btn-fancy.active.action-example, button.btn-fancy.active.utility-example, button.active.fancy-example {
+      background-color: #d9c300; }
+  .btn-toolbar .btn, .btn-toolbar button.action-example, .btn-toolbar button.utility-example, .btn-toolbar button.fancy-example {
     font-size: 18px;
     padding: 10px 14px 9px; }
-    .btn-toolbar .btn:first-child, .btn-toolbar button.action-example:first-child, .btn-toolbar button.utility-example:first-child {
+    .btn-toolbar .btn:first-child, .btn-toolbar button.action-example:first-child, .btn-toolbar button.utility-example:first-child, .btn-toolbar button.fancy-example:first-child {
       -webkit-border-radius: 6px 0 0 6px;
       -moz-border-radius: 6px 0 0 6px;
       border-radius: 6px 0 0 6px; }
-    .btn-toolbar .btn:last-child, .btn-toolbar button.action-example:last-child, .btn-toolbar button.utility-example:last-child {
+    .btn-toolbar .btn:last-child, .btn-toolbar button.action-example:last-child, .btn-toolbar button.utility-example:last-child, .btn-toolbar button.fancy-example:last-child {
       -webkit-border-radius: 0 6px 6px 0;
       -moz-border-radius: 0 6px 6px 0;
       border-radius: 0 6px 6px 0; }
 
-.btn-toolbar .btn.active, .btn-toolbar button.active.action-example, .btn-toolbar button.active.utility-example {
+.btn-toolbar .btn.active, .btn-toolbar button.active.action-example, .btn-toolbar button.active.utility-example, .btn-toolbar button.active.fancy-example {
   color: white; }
 
 .demo-headline {
@@ -5367,13 +5399,13 @@ h6 {
 
 .demo-browser-action {
   padding: 30px 0 12px; }
-  .demo-browser-action > .btn, .demo-browser-action > button.action-example, .demo-browser-action > button.utility-example {
+  .demo-browser-action > .btn, .demo-browser-action > button.action-example, .demo-browser-action > button.utility-example, .demo-browser-action > button.fancy-example {
     padding: 9px 0 10px 11px;
     text-align: left;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-    .demo-browser-action > .btn:before, .demo-browser-action > button.action-example:before, .demo-browser-action > button.utility-example:before {
+    .demo-browser-action > .btn:before, .demo-browser-action > button.action-example:before, .demo-browser-action > button.utility-example:before, .demo-browser-action > button.fancy-example:before {
       color: white;
       content: "\e004";
       font-size: 16px;
@@ -6454,7 +6486,7 @@ textarea,
   .share .toggle {
     float: right;
     margin: 0; }
-  .share .btn, .share button.action-example, .share button.utility-example {
+  .share .btn, .share button.action-example, .share button.utility-example, .share button.fancy-example {
     -webkit-border-radius: 0 0 6px 6px;
     -moz-border-radius: 0 0 6px 6px;
     border-radius: 0 0 6px 6px; }
@@ -7449,21 +7481,24 @@ section.example {
   section.example:last-child {
     margin-right: 0; }
 
-button.utility-example {
-  display: block;
-  float: left;
-  margin-right: 4.82916%;
-  width: 65.05695%; }
-  button.utility-example:last-child {
-    margin-right: 0; }
-
-#utility-button, #action-button, #checkbox, #radio {
+#utility-button, #action-button, #checkbox, #fancy-button, #radio {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 48.82117%; }
-  #utility-button:last-child, #action-button:last-child, #checkbox:last-child, #radio:last-child {
+  #utility-button:last-child, #action-button:last-child, #checkbox:last-child, #fancy-button:last-child, #radio:last-child {
     margin-right: 0; }
+
+#text {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #text:last-child {
+    margin-right: 0; }
+
+#fancy-button {
+  margin-right: 0; }
 
 section.header {
   background-image: url("../images/back_pattern.png"); }
@@ -7477,6 +7512,25 @@ section.action {
 section.input {
   background-image: url("../images/light_wool.png"); }
 
+section > span, div {
+  margin: 1em 0; }
+
+button.utility-example {
+  display: block;
+  float: left;
+  margin-right: 4.82916%;
+  width: 65.05695%; }
+  button.utility-example:last-child {
+    margin-right: 0; }
+
+button.fancy-example {
+  display: block;
+  float: left;
+  margin-right: 4.82916%;
+  width: 65.05695%; }
+  button.fancy-example:last-child {
+    margin-right: 0; }
+
 input.email-example {
   display: block;
   height: 20px;
@@ -7488,8 +7542,7 @@ input.email-example {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-left: 34.11922%; }
+  width: 31.76157%; }
   input.email-example:last-child {
     margin-right: 0; }
 
@@ -7535,6 +7588,9 @@ div.place-box {
   margin-top: 2em;
   display: block;
   background-image: url("../images/hk-above.jpg");
+  background-size: cover;
+  height: 600px;
+  padding: 1em 0;
   -webkit-animation: all 0.125s;
   -moz-animation: all 0.125s;
   animation: all 0.125s;
@@ -7548,8 +7604,13 @@ div.place-box {
   border: 2px solid #bdc1c5; }
   div.place-box:last-child {
     margin-right: 0; }
+  div.place-box.blurred {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px); }
   div.place-box div.place {
-    margin-top: 1em;
     display: block;
     float: left;
     margin-right: 2.35765%;
@@ -7557,16 +7618,30 @@ div.place-box {
     margin-left: 8.5298%; }
     div.place-box div.place:last-child {
       margin-right: 0; }
+    div.place-box div.place img {
+      display: block;
+      float: left;
+      margin-right: 2.84259%;
+      width: 17.72593%; }
+      div.place-box div.place img:last-child {
+        margin-right: 0; }
+    div.place-box div.place .blurb {
+      display: block;
+      float: left;
+      margin-right: 2.84259%;
+      width: 79.43148%;
+      margin-right: 0; }
+      div.place-box div.place .blurb:last-child {
+        margin-right: 0; }
   div.place-box div.place-detail {
+    -webkit-animation: all 0.125s;
+    -moz-animation: all 0.125s;
+    animation: all 0.125s;
+    padding: 1px;
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
-    padding: 1em 2em;
-    -webkit-animation: all 0.125s;
-    -moz-animation: all 0.125s;
-    animation: all 0.125s; }
+    width: 82.94039%; }
     div.place-box div.place-detail:last-child {
       margin-right: 0; }
     div.place-box div.place-detail .actions {
@@ -7580,8 +7655,45 @@ div.place-box {
       display: block;
       float: left;
       margin-right: 2.84259%;
-      width: 48.57871%; }
+      width: 48.57871%;
+      margin-right: 0;
+      height: 200px; }
       div.place-box div.place-detail .map:last-child {
         margin-right: 0; }
     div.place-box div.place-detail ul {
       font-style: italic; }
+
+nav.mobile {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  nav.mobile:last-child {
+    margin-right: 0; }
+  nav.mobile #clipboard {
+    background-image: url("../images/clipboard.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 40px;
+    display: block;
+    margin-left: 1em; }
+  nav.mobile #map {
+    background-image: url("../images/map.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 40px;
+    display: block; }
+
+.navbar-unread {
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  transform: rotate(12deg);
+  right: -10px;
+  top: 5px; }
+
+#place2 {
+  background-image: url("../images/knutsford_terrace.jpg"); }

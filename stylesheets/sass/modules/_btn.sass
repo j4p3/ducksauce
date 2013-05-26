@@ -56,6 +56,16 @@
   &.btn-warning
     +button-states($warning)
 
+  &.btn-fancy
+    color: $blue
+    &:hover,
+    &:focus
+      color: $blue
+    &:active,
+    &.active
+      color: rgba($blue, .75)
+    +button-states($yellow)
+
   // Button with icon inside
   .btn-toolbar &
     font-size: 18px

@@ -3,44 +3,119 @@
 <head>
   <title>DUCKSAUCE</title>
   <link href="stylesheets/style.css" rel="stylesheet">
-
 </head>
 <body>
   <section class="header example">
     <h1>Headers</h1>
-    <nav class="nav"></nav>
+    <h3><em>Web</em></h3>
+    <nav class="row">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li id="logo"></li>
+              <li class="active" id="title"><a href="/">Captain Planner</a>
+                <span class="navbar-unread">beta!</span>
+              </li>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">plan a trip </a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li>
+                <a id='feedback' href="#" onclick="BetaDialog.popDialog()">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h3><em>Mobile</em></h3>
+    <nav class="row mobile">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li id="logo"></li>
+              <li class="active" id="title"><a href="/">Captain Planner</a>
+                <span class="navbar-unread">beta!</span>
+              </li>
+              <li><a href="#" id="clipboard"></a></li>
+              <li><a href="#" id="map"></a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li>
+                <a id='feedback' href="#" onclick="BetaDialog.popDialog()">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   </section>
   <section class="places example">
     <h1>Places</h1>
+    <h3><em>List</em></h3>
     <section id="place-list">
       <div class="place">
         <img src="http://fakeimg.pl/120/">
         <span class="blurb">
-          <h1>Placeholder</h1>
+          <h1>Place Name 1</h1>
+          <p>Lorem ipsum doloremque zheme zai nar too much to drink last night?  Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. But with the blast shield down, I can't even see! How am I supposed to fight?</p>
+        </span>
+      </div>
+      <div class="place">
+        <img src="http://fakeimg.pl/120/">
+        <span class="blurb">
+          <h1>Place Name 2</h1>
           <p>Lorem ipsum doloremque zheme zai nar too much to drink last night?  Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. But with the blast shield down, I can't even see! How am I supposed to fight?</p>
         </span>
       </div>
     </section>
     <section id="place-boxes">
+      <h3><em>Detail</em></h3>
       <div class="place-box">
-        <div class="place" data-toggle="collapse" data-target="#demo-place">
+        <div class="place" data-toggle="collapse" data-target="#demo-place1">
           <img src="http://fakeimg.pl/120/">
           <span class="blurb">
-            <h1>Placeholder</h1>
+            <h1>Place Name 1 Detail</h1>
             <p>Lorem ipsum doloremque zheme zai nar too much to drink last night?  Don't be too proud of this technological terror you've constructed.</p>
           </span>
-        </div>
-        <div class="place-detail collapse" id="demo-place">
-          <div class="actions">
-            <h3>More Info</h3>
-            <ul>
-              <li>that enhances clarity and allows the content and its message </li>
-              <li>Once upon a midnight dreary, while I struggled with JQuery,</li>
-              <li>Sighing softly, weak and weary, troubled by my daunting chore,</li>
-              <li>While I grappled with weak mapping, suddenly a function wrapping</li>
-            </ul>
+          <div class="place-detail collapse" id="demo-place1">
+            <div class="actions">
+              <h3>More Info</h3>
+              <ul>
+                <li>that enhances clarity and allows the content and its message </li>
+                <li>Once upon a midnight dreary, while I struggled with JQuery,</li>
+                <li>Sighing softly, weak and weary, troubled by my daunting chore,</li>
+                <li>While I grappled with weak mapping, suddenly a function wrapping</li>
+              </ul>
+              <button class="action-example">Call to Action!</button>
+            </div>
+            <div class="map" id="map-canvas1">
+            </div>
           </div>
-          <div id="map">
+        </div>
+      </div>
+      <div id="place2" class="place-box">
+        <div class="place" data-toggle="collapse" data-target="#demo-place2">
+          <img src="http://fakeimg.pl/120/">
+          <span class="blurb">
+            <h1>Place Name 2 Detail</h1>
+            <p>Lorem ipsum doloremque zheme zai nar too much to drink last night?  Don't be too proud of this technological terror you've constructed.</p>
+          </span>
+          <div class="place-detail collapse" id="demo-place2">
+            <div class="actions">
+              <h3>More Info</h3>
+              <ul>
+                <li>that enhances clarity and allows the content and its message </li>
+                <li>Once upon a midnight dreary, while I struggled with JQuery,</li>
+                <li>Sighing softly, weak and weary, troubled by my daunting chore,</li>
+                <li>While I grappled with weak mapping, suddenly a function wrapping</li>
+              </ul>
+              <button class="action-example">Call to Action!</button>
+            </div>
+            <div class="map" id="map-canvas2">
+            </div>
           </div>
         </div>
       </div>
@@ -48,13 +123,17 @@
   </section>
   <section class="action example">
     <h1>Actions</h1>
+    <h3><em>Buttons</em></h3>
     <span id="utility-button"><button class="utility-example">Utility Action</button></span>
+    <span id="fancy-button"><button class="fancy-example"><b>Fancy Action</b></button></span>
     <span id="action-button"><button class="action-example"><b>Primary Action</b></button></span>
   </section>
   <section class="input example">
     <h1>Inputs</h1>
+    <h3><em>Email</em></h3>
     <span id="text"><input type="email" placeholder="email" class="email-example"></span>
     <div id="checkbox">
+      <h3><em>Checkbox</em></h3>
       <label class="checkbox" for="checkbox1">
         <span class="icons">
           <span class="first-icon fui-checkbox-unchecked"></span>
@@ -73,6 +152,7 @@
       </label>
     </div>
     <div id="radio">
+      <h3><em>Radio Buttons</em></h3>
       <label class="radio">
         <span class="icons">
           <span class="first-icon fui-radio-unchecked"></span>
@@ -92,9 +172,13 @@
     </div>
   </section>
   <script src="js/jquery-1.8.2.min.js"></script>
-  <script src="js/bootstrap-dropdown.js"></script>
+  <script src="js/bootstrap.js"></script>
   <script src="js/html5shiv.js"></script>
   <script src="js/custom_radio.js"></script>
   <script src="js/custom_checkbox_and_radio.js"></script>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA60QcOlk-jhCGKM_RsQoBRWOqVNnCjXI4&sensor=false">
+    </script>
+  <script src="js/map.js"></script>
 </body>
 </html>
